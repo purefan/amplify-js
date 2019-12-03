@@ -206,7 +206,6 @@ export default class AWSS3Provider implements StorageProvider {
 			expires,
 			metadata,
 			tagging,
-			acl
 		} = opt;
 		const {
 			serverSideEncryption,
@@ -257,9 +256,6 @@ export default class AWSS3Provider implements StorageProvider {
 			if (SSEKMSKeyId) {
 				params.SSEKMSKeyId = SSEKMSKeyId;
 			}
-		}
-		if (acl) {
-			params.ACL = acl;
 		}
 
 		try {
